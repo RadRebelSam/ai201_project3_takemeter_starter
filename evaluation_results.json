@@ -1,0 +1,60 @@
+{
+  "model": "distilbert-base-uncased",
+  "community": "r/anime",
+  "labels": [
+    "analysis",
+    "hot_take",
+    "reaction"
+  ],
+  "dataset_size": 209,
+  "train_size": 146,
+  "val_size": 31,
+  "test_size": 32,
+  "training_args": {
+    "epochs": 3,
+    "learning_rate": 2e-05,
+    "batch_size": 16
+  },
+  "baseline": {
+    "model": "llama-3.3-70b-versatile",
+    "provider": "Groq",
+    "accuracy": 1.0,
+    "per_class": {
+      "analysis": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "hot_take": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "reaction": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    }
+  },
+  "fine_tuned": {
+    "accuracy": 0.875,
+    "per_class": {
+      "analysis": {
+        "precision": 0.8333,
+        "recall": 1.0,
+        "f1": 0.9091
+      },
+      "hot_take": {
+        "precision": 1.0,
+        "recall": 0.6364,
+        "f1": 0.7778
+      },
+      "reaction": {
+        "precision": 0.8462,
+        "recall": 1.0,
+        "f1": 0.9167
+      }
+    }
+  }
+}
